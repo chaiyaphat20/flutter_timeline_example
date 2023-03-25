@@ -32,11 +32,12 @@ class MainPage extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
+          padding: EdgeInsets.only(left: 60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("START"),
@@ -51,7 +52,47 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
+                width: 130,
+                height: 100,
+                child: TimelineTile(
+                  endChild: Container(
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Column(children: [
+                        Row(
+                          children: [
+                            Icon(size: 30, Icons.timer),
+                            Text("12.00"),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 200,
+                          height: 2,
+                          child: const DecoratedBox(
+                            decoration: const BoxDecoration(color: Colors.red),
+                          ),
+                        ),
+                        Text("ทานอาหาร"),
+                      ]),
+                    ),
+                  ),
+                  beforeLineStyle: LineStyle(color: Colors.red, thickness: 6),
+                  afterLineStyle: LineStyle(color: Colors.blue, thickness: 6),
+                  indicatorStyle: IndicatorStyle(
+                      color: Colors.purple,
+                      width: 50,
+                      height: 50,
+                      indicator: Container(
+                        width: 30,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.purple,
+                            borderRadius: BorderRadius.circular(8)),
+                      )),
+                ),
+              ),
+              SizedBox(
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("MID"),
@@ -71,7 +112,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("MID"),
@@ -91,7 +132,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("MID"),
@@ -111,7 +152,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("MID"),
@@ -131,7 +172,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("MID"),
@@ -151,27 +192,7 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 100,
-                height: 100,
-                child: TimelineTile(
-                  endChild: Text("MID"),
-                  beforeLineStyle: LineStyle(color: Colors.red, thickness: 6),
-                  afterLineStyle: LineStyle(color: Colors.blue, thickness: 6),
-                  indicatorStyle: IndicatorStyle(
-                      color: Colors.purple,
-                      width: 50,
-                      height: 50,
-                      indicator: Container(
-                        width: 30,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(8)),
-                      )),
-                ),
-              ),
-              SizedBox(
-                width: 100,
+                width: 130,
                 height: 100,
                 child: TimelineTile(
                   endChild: Text("LAST"),
